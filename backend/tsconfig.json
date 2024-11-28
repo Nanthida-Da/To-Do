@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    /* Language and Module Settings */
+    "target": "ES2017", // Higher target for modern JavaScript features.
+    "module": "CommonJS", // CommonJS for Node.js compatibility.
+    "moduleResolution": "Node", // Resolve modules using Node.js conventions.
+    "lib": ["ES2017", "DOM"], // Include modern JS and browser APIs.
+
+    /* Output Settings */
+    "outDir": "./dist", // Specify output directory for compiled files.
+    "rootDir": "./src", // Ensure correct relative paths in source files.
+
+    /* Type Checking Options */
+    "strict": true, // Enable all strict type-checking options.
+    "noImplicitAny": true, // Raise error on expressions with an `any` type.
+    "strictNullChecks": true, // Make `null` and `undefined` distinct types.
+    "strictFunctionTypes": true, // Strict type checking for function arguments.
+    "strictPropertyInitialization": true, // Ensure class properties are initialized correctly.
+    "noImplicitThis": true, // Raise error on `this` of type `any`.
+    "alwaysStrict": true, // Parse files in strict mode and emit `"use strict"`.
+
+    /* Module and File Resolution */
+    "baseUrl": "./", // Base path for non-relative module imports.
+    "paths": {
+      // Map module paths for cleaner imports.
+      "@/*": ["src/*"]
+    },
+    "resolveJsonModule": true, // Allow importing JSON files as modules.
+
+    /* Interoperability */
+    "esModuleInterop": true, // Ensure compatibility with CommonJS modules.
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules without them.
+
+    /* Performance Options */
+    "skipLibCheck": true, // Skip type checking of declaration files.
+    "incremental": true, // Enable faster incremental builds.
+
+    /* Linting and Consistency */
+    "forceConsistentCasingInFileNames": true // Disallow inconsistent casing in imports.
+  },
+  "include": ["src/**/*.ts"], // Specify included files for compilation.
+  "exclude": ["node_modules", "dist", "**/*.test.ts"] // Exclude unnecessary files.
+}
